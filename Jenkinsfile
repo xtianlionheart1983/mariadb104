@@ -1,12 +1,6 @@
 pipeline {
     agent any
 	stages {
-		stage('Pull Resources') {
-			steps{
-			    git url: 'ssh://git@github.com:xtianlionheart1983/mariadb104.git', branch: 'master', credentialsId: 'ssh-jenkins'
-	
-			}
-		}
 		stage('Build DB Image') {
 			steps{
 			    script{
